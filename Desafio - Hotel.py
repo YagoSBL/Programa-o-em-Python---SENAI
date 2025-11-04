@@ -10,25 +10,115 @@
 # exemplo: valor_cliente3 = preco_duplo * cliente3_dias
 
 #1 Cadastro dos clientes
+quantidade =  int(input('Informe a quantidade de pessoas: '))
 
-cliente1_name = (input('Por favor, informe seu nome: '))
-cliente1_idade = int(input('Agora, informe sua idade para completar o cadastro: '))
-cliente1 = [cliente1_name, cliente1_idade]
-cliente2_name = (input('Por favor, informe seu nome: '))
-cliente2_idade = int(input('Agora, informe sua idade para completar o cadastro: '))
-cliente2 = [cliente2_name, cliente2_idade]
-cliente3_name = (input('Por favor, informe seu nome: '))
-cliente3_idade = int(input('Agora, informe sua idade para completar o cadastro: '))
-cliente3 = [cliente3_name, cliente3_idade]
+dados = {
+'nomes':[],
+'idades':[]
+}
 
-#2 Reserva de quartos
-qrt_cliente1 = input(f'Seja bem vindo {cliente1_name}, escolha o quarto desejado: ')
-qrt_simple = (input('Quarto Simples'))
-qrt_double = (input('Quarto Duplo'))
-qrt_lux = (input('Quarto Luxo'))
-escolha1 = [cliente1, qrt_cliente1]
-qrt_cliente2 = input(f'Seja bem vindo {cliente2_name}, escolha o quarto desejado: ')
-qrt_simple = (input('Quarto Simples'))
-qrt_double = (input('Quarto Duplo'))
-qrt_lux = (input('Quarto Luxo'))
-escolha2 = [cliente2, qrt_cliente2]
+lista_quartos  =  ['', 'Simples', 'Duplo', 'Luxo']
+valores_quartos = [0, 100,150,250]
+
+
+if quantidade == 1:
+    nome  =  input('Por favor, informe seu nome:')
+    idade = int(input('Agora, informe sua idade: '))
+    dados['nomes'].append(nome)
+    dados['idades'].append(idade)
+    escolha =  int(input(f'''
+                    1 - {lista_quartos[1]} R$ {float(valores_quartos[1])}
+                    2 - {lista_quartos[2]} R$ {float(valores_quartos[2])}
+                    3 - {lista_quartos[3]} R$ {float(valores_quartos[3])}               
+                    '''))
+    
+    print('O hospede', nome, 'escolheu o quarto: ', lista_quartos[escolha])
+    quantidade_dias =  int(input('Dias: '))
+    calculo = quantidade_dias * valores_quartos[escolha]
+    print(f'R$, {calculo:.2f}')
+    print('Quantidade de dias do hospede', nome, '-> ', quantidade_dias)
+
+elif quantidade == 2:
+    nome1  =  input('Por favor, informe seu nome:')
+    idade = int(input('Agora, informe a idade: '))
+
+    nome2  =  input('Por favor, informe o seu nome:')
+    idade = int(input('Agora, informe a sua idade: '))
+
+    escolha =  int(input(f'''
+                    Escolha de quarto hospede{nome1}     
+                    1 - {lista_quartos[1]} R$ {float(valores_quartos[1])}
+                    2 - {lista_quartos[2]} R$ {float(valores_quartos[2])}
+                    3 - {lista_quartos[3]} R$ {float(valores_quartos[3])}               
+                    '''))
+    
+    print('O hospede', nome1, 'escolheu o quarto: ', lista_quartos[escolha])
+    quantidade_dias =  int(input('Dias: '))
+    calculo = quantidade_dias * valores_quartos[escolha]
+    print(f'R$, {calculo:.2f}')
+    print('Quantidade de dias do hospede', nome1, '-> ', quantidade_dias)
+
+
+    escolha =  int(input(f'''
+                    1 - {lista_quartos[1]} R$ {float(valores_quartos[1])}
+                    2 - {lista_quartos[2]} R$ {float(valores_quartos[2])}
+                    3 - {lista_quartos[3]} R$ {float(valores_quartos[3])}               
+                    '''))
+    
+    print('O hospede', nome2, 'escolheu o quarto: ', lista_quartos[escolha])
+    quantidade_dias =  int(input('Dias: '))
+    calculo = quantidade_dias * valores_quartos[escolha]
+    print(f'R$, {calculo:.2f}')
+    print('Quantidade de dias do hospede', nome2, '-> ', quantidade_dias)
+
+
+elif quantidade == 3:
+
+    nome1  =  input('Por favor, informe seu nome:')
+    idade = int(input('Agora, informe sua idade: '))
+    escolha =  int(input(f'''
+                    1 - {lista_quartos[1]} R$ {float(valores_quartos[1])}
+                    2 - {lista_quartos[2]} R$ {float(valores_quartos[2])}
+                    3 - {lista_quartos[3]} R$ {float(valores_quartos[3])}               
+                    '''))
+    
+    print('O hospede', nome1, 'escolheu o quarto: ', lista_quartos[escolha])
+    quantidade_dias =  int(input('Dias: '))
+    calculo = quantidade_dias * valores_quartos[escolha]
+    print(f'R$, {calculo:.2f}')
+    print('Quantidade de dias do hospede', nome1, '-> ', quantidade_dias)
+
+
+    nome2  =  input('Por favor, informe seu nome:')
+    idade = int(input('Agora, informe sua idade: '))
+    escolha =  int(input(f'''
+                    1 - {lista_quartos[1]} R$ {float(valores_quartos[1])}
+                    2 - {lista_quartos[2]} R$ {float(valores_quartos[2])}
+                    3 - {lista_quartos[3]} R$ {float(valores_quartos[3])}               
+                    '''))
+    
+    print('O hospede', nome2, 'escolheu o quarto: ', lista_quartos[escolha])
+    quantidade_dias =  int(input('Dias: '))
+    calculo = quantidade_dias * valores_quartos[escolha]
+    print(f'R$, {calculo:.2f}')
+    print('Quantidade de dias do hospede', nome2, '-> ', quantidade_dias)
+
+
+    nome3  =  input('Por favor, informe seu nome:')
+    idade = int(input('Agora, informe sua idade: '))
+    escolha =  int(input(f'''
+                    1 - {lista_quartos[1]} R$ {float(valores_quartos[1])}
+                    2 - {lista_quartos[2]} R$ {float(valores_quartos[2])}
+                    3 - {lista_quartos[3]} R$ {float(valores_quartos[3])}               
+                    '''))
+    
+    print('O hospede', nome3, 'escolheu o quarto: ', lista_quartos[escolha])
+    quantidade_dias =  int(input('Dias: '))
+    calculo = quantidade_dias * valores_quartos[escolha]
+    print(f'R$, {calculo:.2f}')
+    print('Quantidade de dias do hospede', nome3, '-> ', quantidade_dias)
+
+
+
+else:
+    print('Para mais hospedes, entre em contato com a coordenação.')
