@@ -46,10 +46,11 @@ match num:
         print ("É uma criança")
     case x if x <= 17:
         print ("É um adolescente")
-    case x if x < 35:
+    case x if x <= 35:
         print ("É um jovem") 
-    case x if x < 64:
+    case x if x <= 64:
         print ("É um adulto")
     case x if x >= 65:
 
         print ("E um idoso")
+
