@@ -39,7 +39,7 @@ match num:
         print ("É maior que 10") 
 
 # 5 - Classificar faixas etárias -  criança(12), adolescente(17), jovem(35), adulto 35 ><64, idoso(65)
-num = int(input('Digite uma idade para verificara faixa etária: '))
+num = int(input('Digite uma idade para verificar a faixa etária: '))
 
 match num:
     case x if x <= 12:
@@ -51,4 +51,5 @@ match num:
     case x if x < 64:
         print ("É um adulto")
     case x if x >= 65:
+
         print ("E um idoso")
